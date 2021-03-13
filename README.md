@@ -4,4 +4,4 @@
 **v0.0.1**
 
 # Script:
-**loadstring(game:HttpGet("https://raw.githubusercontent.com/ahFlic/Venom-Hub/main/main.lua"))()**
+**loadstring(game:HttpGet("https://raw.githubusercontent.com/ahFlic/Flic-Hub/main/main.lua"))()**
