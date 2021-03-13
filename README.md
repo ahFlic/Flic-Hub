@@ -1,4 +1,4 @@
-# ***Flic Hub***
+# ***Flic-Hub***
 
 # Current Version:
 **v0.0.1**
