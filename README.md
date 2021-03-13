@@ -1,7 +1,7 @@
 # ***Venom-Hub***
 
-# *Current Version:*
+# Current Version:
 **v0.0.1**
 
-# *Script:*
+# Script:
 **loadstring(game:HttpGet("https://raw.githubusercontent.com/ahFlic/Venom-Hub/main/main.lua"))()**
