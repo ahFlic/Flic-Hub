@@ -20,8 +20,8 @@ local function getexploit()
  end
  
  -- Checks if GUI already exists
- if game:GetService("CoreGui"):FindFirstChild("Flic-Hub: Universal" or "Flic-Hub: Tower of Hell") then
-     game:GetService("CoreGui"):FindFirstChild("Flic-Hub: Universal" or "Flic-Hub: Tower of Hell"):Destroy()
+ if game:GetService("CoreGui"):FindFirstChild("Flic Hub: Universal" or "Flic Hub: Tower of Hell") then
+     game:GetService("CoreGui"):FindFirstChild("Flic Hub: Universal" or "Flic Hub: Tower of Hell"):Destroy()
  end
  
  -- Checks for the game
@@ -34,7 +34,7 @@ local function getexploit()
  -- Main
  local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
  
- local Window = Library.CreateLib("Flic-Hub: " .. place .. " - ".. getexploit(), "Midnight")
+ local Window = Library.CreateLib("Flic Hub: " .. place .. " - ".. getexploit(), "Midnight" or "Sentinel")
  
  -- Misc Tab
  local MiscTab = Window:NewTab("Misc")
