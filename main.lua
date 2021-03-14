@@ -1,3 +1,4 @@
+-- Gets the exploit
 local function getexploit()
     local exploit =
         (syn and not is_sirhurt_closure and not pebc_execute and "Synapse") or
@@ -20,35 +21,37 @@ local function getexploit()
  end
  
  -- Checks if GUI already exists
- if game:GetService("CoreGui"):FindFirstChild("Flic Hub: Universal" or "Flic Hub: Tower of Hell") then
-     game:GetService("CoreGui"):FindFirstChild("Flic Hub: Universal" or "Flic Hub: Tower of Hell"):Destroy()
- end
+ for _, v in next, game.CoreGui:GetChildren() do
+    if string.find(v.Name:lower(), "lunatic") then
+        v:Destroy()
+    end
+end
  
  -- Checks for the game
  local place = "Universal"
  
  if game.PlaceId == 1962086868 then
-     place = "Tower Of Hell"
+     place = "Tower Of Hell" -- Temp game for test
  end
  
  -- Main
  local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
  
- local Window = Library.CreateLib("Flic Hub: " .. place .. " - ".. getexploit(), "Midnight" or "Sentinel")
+ local Window = Library.CreateLib("Lunatic Hub: " .. place .. " - ".. getexploit(), "Midnight" or "Sentinel")
  
  -- Misc Tab
  local MiscTab = Window:NewTab("Misc")
  local MiscSection = MiscTab:NewSection("Misc Features")
  MiscSection:NewButton("Fly", "Toggable fly, 'E' to toggle on/off.", function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/ahFlic/Flic-Hub/main/Scripts/Simple%20Scripts/Fly.lua"))()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/ahFlic/Lunatic/main/Scripts/Simple%20Scripts/Fly.lua"))()
  end)
  MiscSection:NewButton("Rejoin", "Rejoins the place you're currently in.", function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/ahFlic/Flic-Hub/main/Scripts/Simple%20Scripts/Rejoin.lua"))()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/ahFlic/Lunatic/main/Scripts/Simple%20Scripts/Rejoin.lua"))()
  end)
  
  -- Credits Tab
  local CreditsTab = Window:NewTab("Credits")
- local CreditsFlic = CreditsTab:NewSection("Flic - Main Developer/Scripter")
+ local CreditsFlic = CreditsTab:NewSection("Flic - Developer/Scripter")
  getgenv().clipboard = clipboard or setclipboard or syn_clipboard_set
  repeat until clipboard
  CreditsFlic:NewButton("Copy Flics Discord", "Copies Flics discord to your clipboard.", function()
